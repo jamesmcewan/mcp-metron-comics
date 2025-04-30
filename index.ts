@@ -36,7 +36,7 @@ const server = new McpServer({
 
 server.tool(
   "comics_week",
-  "Get a list of comics that are available on a new comics day Wednesday",
+  "Get a list of new comics that are available on a given Wednesday",
   { week: z.string().date() },
   async ({ week }) => {
     const endpoint = `https://metron.cloud/api/issue/?store_date=${week}`;
